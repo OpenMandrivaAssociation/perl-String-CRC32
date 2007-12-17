@@ -12,7 +12,6 @@ Group: 		Development/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/String/%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}
 Buildrequires:	perl-devel
-BuildRoot: 	%{_tmppath}/%{name}-%{version}
 
 %description 
 This packages provides a perl module to generate checksums from strings

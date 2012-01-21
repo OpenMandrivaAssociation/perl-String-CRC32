@@ -1,7 +1,7 @@
 %define module  String-CRC32
 %define name	perl-%{module}
 %define version 1.4
-%define release %mkrel 11
+%define release %mkrel 12
 
 Name: 		%{name}
 Version: 	%{version}

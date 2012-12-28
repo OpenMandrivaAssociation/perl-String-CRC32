@@ -1,28 +1,25 @@
-%define module  String-CRC32
-%define name	perl-%{module}
-%define version 1.4
-%define release 15
+%define	modname	String-CRC32
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		perl-%{modname}
+Version:	1.4
+Release:	15
 Summary:	Perl interface for cyclic redundency check generation
 License:	GPL or Artistic
 Group:		Development/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/String/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modnames/by-modname/String/%{modname}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{modname}
 Buildrequires:	perl-devel
 
 %description 
-This packages provides a perl module to generate checksums from strings
+This packages provides a perl modname to generate checksums from strings
 and from files.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{modname}-%{version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-%make CFLAGS="%{optflags}"
+perl Makefile.PL INSTALLDIRS=vendor
+%make
 
 %check
 make test
@@ -36,9 +33,11 @@ make test
 %{perl_vendorarch}/String
 %{perl_vendorarch}/auto/String
 
-
-
 %changelog
+* Fri Dec 28 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.4-15
+- cleanups
+- rebuild for new perl-5.16.2
+
 * Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 1.4-13mdv2012.0
 + Revision: 765658
 - rebuilt for perl-5.14.2

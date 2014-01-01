@@ -1,13 +1,14 @@
 %define	modname	String-CRC32
+%define upstream_version 1.4
 
 Summary:	Perl interface for cyclic redundency check generation
 Name:		perl-%{modname}
-Version:	1.4
-Release:	20
+Version:	%perl_convert_version %{upstream_version}
+Release:	21
 License:	GPLv2 or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modnames/by-modname/String/%{modname}-%{version}.tar.bz2
+Source0:	ftp://ftp.perl.org/pub/CPAN/modnames/by-modname/String/%{modname}-%{upstream_version}.tar.bz2
 Buildrequires:	perl-devel
 
 %description 
@@ -15,7 +16,7 @@ This packages provides a perl modname to generate checksums from strings
 and from files.
 
 %prep
-%setup -qn %{modname}-%{version}
+%setup -qn %{modname}-%{upstream_version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor

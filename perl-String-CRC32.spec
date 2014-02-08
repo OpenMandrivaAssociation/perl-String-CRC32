@@ -2,7 +2,7 @@
 
 Name:		perl-%{modname}
 Version:	1.4
-Release:	16
+Release:	17
 Summary:	Perl interface for cyclic redundency check generation
 License:	GPL or Artistic
 Group:		Development/Perl

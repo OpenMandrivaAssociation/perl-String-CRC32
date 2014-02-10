@@ -1,14 +1,14 @@
 %define	modname	String-CRC32
-%define upstream_version 1.4
+%define upstream_version 1.5
 
 Summary:	Perl interface for cyclic redundency check generation
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{upstream_version}
-Release:	21
+Release:	1
 License:	GPLv2 or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modnames/by-modname/String/%{modname}-%{upstream_version}.tar.bz2
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/String/String-CRC32-%{upstream_version}.tar.gz
 Buildrequires:	perl-devel
 
 %description 
@@ -33,4 +33,5 @@ make test
 %{perl_vendorarch}/String
 %{perl_vendorarch}/auto/String
 %{_mandir}/man3/*
+
 

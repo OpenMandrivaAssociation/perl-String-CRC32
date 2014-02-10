@@ -1,2 +1,4 @@
+removed_sources:
+  String-CRC32-1.4.tar.bz2: cfdb1a3e381c84fe7a5fee5b6e91018b79a74239
 sources:
-  "String-CRC32-1.4.tar.bz2": cfdb1a3e381c84fe7a5fee5b6e91018b79a74239
+  String-CRC32-1.5.tar.gz: a267e5993fcbfdb3ee29c286f1cc463606965dc6

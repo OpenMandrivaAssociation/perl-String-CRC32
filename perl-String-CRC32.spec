@@ -4,7 +4,7 @@
 Summary:	Perl interface for cyclic redundency check generation
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	4
 License:	GPLv2 or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}

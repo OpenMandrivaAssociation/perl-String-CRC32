@@ -1,4 +1,7 @@
-%define	modname	String-CRC32
+# Work around incomplete debug packages
+%global _empty_manifest_terminate_build 0
+
+%define modname String-CRC32
 %define upstream_version 1.5
 
 Summary:	Perl interface for cyclic redundency check generation
@@ -16,22 +19,20 @@ This packages provides a perl modname to generate checksums from strings
 and from files.
 
 %prep
-%setup -qn %{modname}-%{upstream_version}
+%autosetup -n %{modname}-%{upstream_version} -p1
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README
 %{perl_vendorarch}/String
 %{perl_vendorarch}/auto/String
-%{_mandir}/man3/*
-
-
+%doc %{_mandir}/man3/*

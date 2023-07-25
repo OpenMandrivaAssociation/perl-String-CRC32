@@ -31,7 +31,6 @@ make test
 %make_install
 
 %files
-%doc README
-%{perl_vendorarch}/String
-%{perl_vendorarch}/auto/String
-%doc %{_mandir}/man3/*
+%doc Changes LICENSE README
+%{perl_vendorlib}/String
+%{_mandir}/man3/*

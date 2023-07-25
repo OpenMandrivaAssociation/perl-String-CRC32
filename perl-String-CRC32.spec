@@ -1,6 +1,4 @@
-# Work around incomplete debug packages
-%global _empty_manifest_terminate_build 0
-
+%undefine _debugsource_packages
 %define modname String-CRC32
 
 Summary:	Perl interface for cyclic redundency check generation
@@ -31,7 +29,6 @@ make test
 %make_install
 
 %files
-%doc README
 %{perl_vendorarch}/String
 %{perl_vendorarch}/auto/String
 %doc %{_mandir}/man3/*

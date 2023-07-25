@@ -19,7 +19,7 @@ and from files.
 
 %prep
 %autosetup -p1 -n %{modname}-%{version}
-perl Makefile.PL INSTALLDIRS=vendor
+%__perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}" --skipdeps </dev/null
 
 %build
 %make_build
@@ -32,6 +32,6 @@ make test
 
 %files
 %doc Changes LICENSE README
-%{perl_vendorarch}/String
-%{perl_vendorarch}/auto/String
+%{perl_vendorlib}/String
+%{perl_vendorlib}/auto
 %{_mandir}/man3/*

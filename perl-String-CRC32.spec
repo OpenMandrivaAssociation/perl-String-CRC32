@@ -32,5 +32,6 @@ make test
 
 %files
 %doc Changes LICENSE README
-%{perl_vendorlib}/String
+%{perl_vendorarch}/String
+%{perl_vendorarch}/auto/String
 %{_mandir}/man3/*

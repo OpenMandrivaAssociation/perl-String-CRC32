@@ -7,7 +7,7 @@ Version:	2.100
 Release:	1
 License:	GPLv2 or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/String/%{modname}-%{version}.tar.gz
 Buildrequires:	perl-devel
 
